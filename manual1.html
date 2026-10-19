@@ -2,139 +2,155 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Методы сбора информации (OSINT)</title>
-  <style>
-    body { background-color: #0f0f0f; color: #e0e0e0; font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-    h1, h2, h3 { color: #4af; }
-    a { color: #4af; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul, ol { background: #1a1a1a; padding: 20px 40px; border-radius: 8px; border: 1px solid #333; }
-    li { margin-bottom: 10px; }
-    footer { text-align: center; color: #888; margin-top: 40px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a href="index.html">← Назад в меню</a>
-  <h1>1. Методы сбора информации (OSINT). Базовый уровень</h1>
 
-  <h2>1.1. Ресурсы для публикации данных</h2>
-  <p>Для публикации материалов используется ряд платформ:</p>
-  <ul>
-    <li>ghostbin.co</li>
-    <li>pastebin.co</li>
-    <li>doxbin.org</li>
-    <li>paste4btc.com</li>
-    <li>pastebin.com</li>
-    <li>doxbinmxoyrb4x7f.onion</li>
-  </ul>
+  <aside class="sidebar">
+    <h1>@advocatssaindessa</h1>
+    <p>Сборник методичек</p>
+    <a href="index.html">🏠 На главную</a>
+    <a href="manual1.html" class="active">1. Сбор информации</a>
+    <a href="manual2.html">2. Блокировка аккаунтов</a>
+    <a href="manual3.html">3. Телефонные атаки</a>
+    <a href="manual4.html">4. Кибербуллинг</a>
+    <a href="manual5.html">5. Безопасность</a>
+    <a href="manual6.html">6. Соц. инженерия</a>
+    <a href="manual7.html">7. Очистка следа</a>
+    <a href="manual8.html">8. Разморозка Telegram</a>
+    <a href="glossary.html">📖 Глоссарий</a>
+  </aside>
 
-  <h2>1.2. Методы поиска в социальных сетях</h2>
-  <p>Осуществляется поверхностный поиск информации по социальным сетям (VK, OK, Facebook).</p>
+  <main class="main-content">
+    <div class="content-box">
+      
+      <button onclick="window.print()" class="btn">🖨️ Скачать в PDF</button>
+      
+      <h1>1. Методы сбора информации (OSINT). Базовый уровень</h1>
 
-  <h3>1.3. Алгоритм установления персональных данных (на примере VK)</h3>
-  <p>Для получения сведений (ФИО, дата рождения, учебное заведение) применяется следующий порядок действий:</p>
-  <ol>
-    <li>Необходимо перейти на страницу объекта, открыть вкладку «Друзья» и скопировать цифровой идентификатор из адресной строки (параметр после «friends»).</li>
-    <li>Примечание: метод неприменим к пользователям с идентификатором, начинающимся на 440 и выше.</li>
-    <li>Следует ввести скопированный идентификатор с префиксом «id» в поисковые системы (Google, Яндекс). Анализ результатов позволяет получить дополнительные сведения (имя при регистрации, телефон, связанные группы). При отсутствии результатов осуществляется переход на страницу пользователя для определения даты рождения (в 87% случаев указывается день и месяц, год вычисляется аналитически). Далее открывается список друзей, выбирается город (возможно указание Москвы или Санкт-Петербурга). Проверяются первые три города после указанных. При числе друзей менее 10 используется сервис 220vk.com для выявления скрытых связей. Определяется преобладающий год рождения среди друзей (соответствует году рождения объекта). На платформе OK.RU выполняется поиск по имени и городу; при отсутствии результатов — по дате рождения (вероятность совпадения 100%). Устанавливаются фамилия и имя (в 50% случаев — отчество). При отсутствии данных об отце его возраст вычисляется путем прибавления 18 лет к возрасту объекта, после чего выполняется поиск.</li>
-    <li>При сомнениях в принадлежности страницы конкретному лицу применяется метод сопоставления активности. Анализируется тип устройства (мобильный/ПК) и временные интервалы нахождения в сети. Например, при наличии двух профилей с идентичными данными, активных с мобильных устройств одновременно, и третьего, выходящего в сеть с интервалом в 3-5 часов, последний с высокой долей вероятности является искомым.</li>
-  </ol>
+      <h2>1.1. Ресурсы для публикации данных</h2>
+      <p>Для публикации материалов используется ряд платформ:</p>
+      <ul>
+        <li>ghostbin.co</li>
+        <li>pastebin.co</li>
+        <li>doxbin.org</li>
+        <li>paste4btc.com</li>
+        <li>pastebin.com</li>
+        <li>doxbinmxoyrb4x7f.onion</li>
+      </ul>
 
-  <h3>1.4. Вспомогательные сервисы</h3>
-  <ul>
-    <li><a href="https://vk.com/app7183114" target="_blank">https://vk.com/app7183114</a></li>
-    <li>@InfoVkUser_bot</li>
-    <li>@FindNameVk_bot</li>
-    <li>@GetPhone_bot</li>
-    <li>220vk.com</li>
-    <li><a href="https://online-vk.ru/pivatfriends.php?id=123456789" target="_blank">https://online-vk.ru/pivatfriends.php?id=123456789</a> (требуется замена идентификатора)</li>
-  </ul>
+      <h2>1.2. Методы поиска в социальных сетях</h2>
+      <p>Осуществляется поверхностный поиск информации по социальным сетям (VK, OK, Facebook).</p>
 
-  <h3>1.5. Поиск по базе данных «Одноклассники» (OK)</h3>
-  <p>Применяются аналогичные методы, что и для VK.</p>
-  <p><strong>Метод установления номера телефона через OK:</strong></p>
-  <ol>
-    <li>Выполнить поиск по имени, городу и дате рождения.</li>
-    <li>Выполнить поиск по инициалам и городу (с отсеиванием результатов).</li>
-    <li>Использовать фильтр по городу и полной дате рождения.</li>
-    <li>Осуществить поиск родственников по фамилии (с использованием вычисленного возраста).</li>
-    <li>Проверить идентификатор канала YouTube в Google для установления предыдущих названий.</li>
-  </ol>
-  <p><strong>Инструкция по восстановлению доступа:</strong></p>
-  <ol>
-    <li>Добавить профиль VK в друзья.</li>
-    <li>Перейти в OK и открыть раздел «Друзья».</li>
-    <li>Использовать функцию «Добавить друга из ВК».</li>
-    <li>Скопировать ссылку на найденный профиль.</li>
-    <li>Перейти по адресу <a href="https://ok.ru/password/recovery" target="_blank">https://ok.ru/password/recovery</a> и выбрать восстановление через профиль.</li>
-    <li>Вставить ссылку в поле поиска. Система отобразит часть номера телефона и адрес электронной почты.</li>
-  </ol>
-  <p><strong>Вспомогательный сервис:</strong> ok.city4me.com</p>
+      <h3>1.3. Алгоритм установления персональных данных (на примере VK)</h3>
+      <p>Для получения сведений (ФИО, дата рождения, учебное заведение) применяется следующий порядок действий:</p>
+      <ol>
+        <li>Необходимо перейти на страницу объекта, открыть вкладку «Друзья» и скопировать цифровой идентификатор из адресной строки (параметр после «friends»).</li>
+        <li>Примечание: метод неприменим к пользователям с идентификатором, начинающимся на 440 и выше.</li>
+        <li>Следует ввести скопированный идентификатор с префиксом «id» в поисковые системы (Google, Яндекс). Анализ результатов позволяет получить дополнительные сведения (имя при регистрации, телефон, связанные группы). При отсутствии результатов осуществляется переход на страницу пользователя для определения даты рождения (в 87% случаев указывается день и месяц, год вычисляется аналитически). Далее открывается список друзей, выбирается город (возможно указание Москвы или Санкт-Петербурга). Проверяются первые три города после указанных. При числе друзей менее 10 используется сервис 220vk.com для выявления скрытых связей. Определяется преобладающий год рождения среди друзей (соответствует году рождения объекта). На платформе OK.RU выполняется поиск по имени и городу; при отсутствии результатов — по дате рождения (вероятность совпадения 100%). Устанавливаются фамилия и имя (в 50% случаев — отчество). При отсутствии данных об отце его возраст вычисляется путем прибавления 18 лет к возрасту объекта, после чего выполняется поиск.</li>
+        <li>При сомнениях в принадлежности страницы конкретному лицу применяется метод сопоставления активности. Анализируется тип устройства (мобильный/ПК) и временные интервалы нахождения в сети. Например, при наличии двух профилей с идентичными данными, активных с мобильных устройств одновременно, и третьего, выходящего в сеть с интервалом в 3-5 часов, последний с высокой долей вероятности является искомым.</li>
+      </ol>
 
-  <h3>1.6. Поиск в Facebook</h3>
-  <p>При наличии Facebook ID (полученного, например, через lampyre.io) страницу можно найти с помощью алгоритма, описанного на StackOverflow.</p>
-  <p>Ссылка: <a href="https://stackoverflow.com/questions/12827775/facebook-user-url-by-id" target="_blank">https://stackoverflow.com/questions/12827775/facebook-user-url-by-id</a></p>
-  <p><strong>Сервисы:</strong></p>
-  <ul>
-    <li>graph.tips</li>
-    <li>whopostedwhat.com</li>
-    <li>lookup-id.com (поиск ID аккаунта Facebook)</li>
-  </ul>
-  <p>Поиск ID в поисковых системах также может предоставить дополнительные сведения.</p>
-  <p>@usersbox_bot (поиск аккаунтов VK с указанным Facebook).</p>
-  <p><a href="https://facebook.com/browse/mutual_friends/?uid=USERID&node=USERID" target="_blank">https://facebook.com/browse/mutual_friends/?uid=USERID&node=USERID</a> — поиск общих друзей (требуется замена USERID).</p>
+      <h3>1.4. Вспомогательные сервисы</h3>
+      <ul>
+        <li><a href="https://vk.com/app7183114" target="_blank">https://vk.com/app7183114</a></li>
+        <li>@InfoVkUser_bot</li>
+        <li>@FindNameVk_bot</li>
+        <li>@GetPhone_bot</li>
+        <li>220vk.com</li>
+        <li><a href="https://online-vk.ru/pivatfriends.php?id=123456789" target="_blank">https://online-vk.ru/pivatfriends.php?id=123456789</a> (требуется замена идентификатора)</li>
+      </ul>
+      <h3>1.5. Поиск по базе данных «Одноклассники» (OK)</h3>
+      <p>Применяются аналогичные методы, что и для VK.</p>
+      <p><strong>Метод установления номера телефона через OK:</strong></p>
+      <ol>
+        <li>Выполнить поиск по имени, городу и дате рождения.</li>
+        <li>Выполнить поиск по инициалам и городу (с отсеиванием результатов).</li>
+        <li>Использовать фильтр по городу и полной дате рождения.</li>
+        <li>Осуществить поиск родственников по фамилии (с использованием вычисленного возраста).</li>
+        <li>Проверить идентификатор канала YouTube в Google для установления предыдущих названий.</li>
+      </ol>
+      <p><strong>Инструкция по восстановлению доступа:</strong></p>
+      <ol>
+        <li>Добавить профиль VK в друзья.</li>
+        <li>Перейти в OK и открыть раздел «Друзья».</li>
+        <li>Использовать функцию «Добавить друга из ВК».</li>
+        <li>Скопировать ссылку на найденный профиль.</li>
+        <li>Перейти по адресу <a href="https://ok.ru/password/recovery" target="_blank">https://ok.ru/password/recovery</a> и выбрать восстановление через профиль.</li>
+        <li>Вставить ссылку в поле поиска. Система отобразит часть номера телефона и адрес электронной почты.</li>
+      </ol>
+      <p><strong>Вспомогательный сервис:</strong> ok.city4me.com</p>
 
-  <h3>1.7. Мультифункциональные сервисы поиска</h3>
-  <ul>
-    <li><a href="https://thatsthem.com" target="_blank">https://thatsthem.com</a></li>
-    <li><a href="https://www.spokeo.com" target="_blank">https://www.spokeo.com</a></li>
-    <li><a href="https://pipl.com" target="_blank">https://pipl.com</a></li>
-    <li><a href="https://nuga.app/" target="_blank">https://nuga.app/</a></li>
-    <li><a href="https://www.fastpeoplesearch.com" target="_blank">https://www.fastpeoplesearch.com</a></li>
-    <li><a href="https://www.truepeoplesearch.com" target="_blank">https://www.truepeoplesearch.com</a></li>
-    <li><a href="https://www.familytreenow.com" target="_blank">https://www.familytreenow.com</a></li>
-    <li><a href="https://socialcatfish.com/" target="_blank">https://socialcatfish.com/</a></li>
-    <li><a href="https://usersearch.org/" target="_blank">https://usersearch.org/</a></li>
-    <li><a href="https://lampyre.io/" target="_blank">https://lampyre.io/</a></li>
-    <li><a href="https://dehashed.com/" target="_blank">https://dehashed.com/</a></li>
-  </ul>
+      <h3>1.6. Поиск в Facebook</h3>
+      <p>При наличии Facebook ID (полученного, например, через lampyre.io) страницу можно найти с помощью алгоритма, описанного на StackOverflow.</p>
+      <p>Ссылка: <a href="https://stackoverflow.com/questions/12827775/facebook-user-url-by-id" target="_blank">https://stackoverflow.com/questions/12827775/facebook-user-url-by-id</a></p>
+      <p><strong>Сервисы:</strong></p>
+      <ul>
+        <li>graph.tips</li>
+        <li>whopostedwhat.com</li>
+        <li>lookup-id.com (поиск ID аккаунта Facebook)</li>
+      </ul>
+      <p>Поиск ID в поисковых системах также может предоставить дополнительные сведения.</p>
+      <p>@usersbox_bot (поиск аккаунтов VK с указанным Facebook).</p>
+      <p><a href="https://facebook.com/browse/mutual_friends/?uid=USERID&node=USERID" target="_blank">https://facebook.com/browse/mutual_friends/?uid=USERID&node=USERID</a> — поиск общих друзей (требуется замена USERID).</p>
 
-  <h3>1.8. Поиск по электронной почте и номеру телефона</h3>
-  <p>Для поиска по электронной почте применяются операторы Google Dorks (целенаправленные поисковые запросы):</p>
-  <ul>
-    <li>"@example.com" site:example.com — поиск почтовых ящиков на определенном домене.</li>
-    <li>HR "email" site:example.com filetype:csv | filetype:xls | filetype:xlsx — поиск контактов HR в форматах xls, xlsx, csv.</li>
-    <li>site:example.com intext:@gmail.com filetype:xls — извлечение ID почтовых ящиков Gmail из определенного домена.</li>
-  </ul>
-  <p>Корректно сформированный поисковый запрос позволяет получить значительный объем данных.</p>
+      <h3>1.7. Мультифункциональные сервисы поиска</h3>
+      <ul>
+        <li><a href="https://thatsthem.com" target="_blank">https://thatsthem.com</a></li>
+        <li><a href="https://www.spokeo.com" target="_blank">https://www.spokeo.com</a></li>
+        <li><a href="https://pipl.com" target="_blank">https://pipl.com</a></li>
+        <li><a href="https://nuga.app/" target="_blank">https://nuga.app/</a></li>
+        <li><a href="https://www.fastpeoplesearch.com" target="_blank">https://www.fastpeoplesearch.com</a></li>
+        <li><a href="https://www.truepeoplesearch.com" target="_blank">https://www.truepeoplesearch.com</a></li>
+        <li><a href="https://www.familytreenow.com" target="_blank">https://www.familytreenow.com</a></li>
+        <li><a href="https://socialcatfish.com/" target="_blank">https://socialcatfish.com/</a></li>
+        <li><a href="https://usersearch.org/" target="_blank">https://usersearch.org/</a></li>
+        <li><a href="https://lampyre.io/" target="_blank">https://lampyre.io/</a></li>
+        <li><a href="https://dehashed.com/" target="_blank">https://dehashed.com/</a></li>
+      </ul>
 
-  <h3>1.9. Проверка утечек данных</h3>
-  <ul>
-    <li><a href="https://haveibeenpwned.com/" target="_blank">https://haveibeenpwned.com/</a></li>
-    <li><a href="https://ghostproject.fr" target="_blank">https://ghostproject.fr</a></li>
-    </ul>
-  <p>Сервис для проверки паролей от взломанных e-mail: <a href="https://intelx.io/" target="_blank">https://intelx.io/</a></p>
-  <p>Таблица соответствия «почта-пароль»: <a href="https://drive.google.com/open?id=1yDi7mjE50f3vCRt0GB-QlnR01uM5gTRz" target="_blank">https://drive.google.com/open?id=1yDi7mjE50f3vCRt0GB-QlnR01uM5gTRz</a></p>
-  <p>База данных уязвимостей и поисковых запросов: <a href="https://www.exploit-db.com/google-hacking-database" target="_blank">https://www.exploit-db.com/google-hacking-database</a> (содержит примеры запросов для поиска слитых паролей, незащищенных документов и уязвимых устройств).</p>
-  <p>Сервис fth.su (база leakcheck).</p>
-  <p>Сервис комплексного поиска: lampyre.io</p>
-  <p><a href="https://nuga.app/" target="_blank">https://nuga.app/</a> — поиск аккаунта Instagram по номеру телефона.</p>
-  <p><a href="https://mirror.bullshit.agency" target="_blank">https://mirror.bullshit.agency</a> — поиск объявлений на досках объявлений по номеру телефона.</p>
-  <p><a href="https://nomer.org" target="_blank">https://nomer.org</a> — база данных адресов.</p>
-  <p>Метод определения номера через DonatePay/DonationAlerts: при возникновении ошибки 503 Bad Gateway на странице оплаты, просмотр кода элемента позволяет получить часть данных пользователя (метод актуален).</p>
-  <ul>
-    <li><a href="http://com.lullar.com" target="_blank">http://com.lullar.com</a></li>
-    <li><a href="http://www.emailfinder.com" target="_blank">http://www.emailfinder.com</a></li>
-    <li><a href="http://www.spokeo.com/email-search" target="_blank">http://www.spokeo.com/email-search</a></li>
-    <li><a href="http://ctrlq.org/google/images/" target="_blank">http://ctrlq.org/google/images/</a></li>
-    <li><a href="http://emailchange.com/" target="_blank">http://emailchange.com/</a></li>
-  </ul>
+      <h3>1.8. Поиск по электронной почте и номеру телефона</h3>
+      <p>Для поиска по электронной почте применяются операторы Google Dorks (целенаправленные поисковые запросы):</p>
+      <ul>
+        <li>"@example.com" site:example.com — поиск почтовых ящиков на определенном домене.</li>
+        <li>HR "email" site:example.com filetype:csv | filetype:xls | filetype:xlsx — поиск контактов HR в форматах xls, xlsx, csv.</li>
+        <li>site:example.com intext:@gmail.com filetype:xls — извлечение ID почтовых ящиков Gmail из определенного домена.</li>
+      </ul>
+      <p>Корректно сформированный поисковый запрос позволяет получить значительный объем данных.</p>
 
-  <h3>1.10. Методология поиска в поисковых системах</h3>
-  <p>Руководство по операторам Google: <a href="https://www.rush-analytics.ru/blog/seo-gid-po-poiskovym-operatoram-google" target="_blank">https://www.rush-analytics.ru/blog/seo-gid-po-poiskovym-operatoram-google</a></p>
+      <h3>1.9. Проверка утечек данных</h3>
+      <ul>
+        <li><a href="https://haveibeenpwned.com/" target="_blank">https://haveibeenpwned.com/</a></li>
+        <li><a href="https://ghostproject.fr" target="_blank">https://ghostproject.fr</a></li>
+      </ul>
+      <p>Сервис для проверки паролей от взломанных e-mail: <a href="https://intelx.io/" target="_blank">https://intelx.io/</a></p>
+      <p>Таблица соответствия «почта-пароль»: <a href="https://drive.google.com/open?id=1yDi7mjE50f3vCRt0GB-QlnR01uM5gTRz" target="_blank">https://drive.google.com/open?id=1yDi7mjE50f3vCRt0GB-QlnR01uM5gTRz</a></p>
+      <p>База данных уязвимостей и поисковых запросов: <a href="https://www.exploit-db.com/google-hacking-database" target="_blank">https://www.exploit-db.com/google-hacking-database</a> (содержит примеры запросов для поиска слитых паролей, незащищенных документов и уязвимых устройств).</p>
+      <p>Сервис fth.su (база leakcheck).</p>
+      <p>Сервис комплексного поиска: lampyre.io</p>
+      <p><a href="https://nuga.app/" target="_blank">https://nuga.app/</a> — поиск аккаунта Instagram по номеру телефона.</p>
+      <p><a href="https://mirror.bullshit.agency" target="_blank">https://mirror.bullshit.agency</a> — поиск объявлений на досках объявлений по номеру телефона.</p>
+      <p><a href="https://nomer.org" target="_blank">https://nomer.org</a> — база данных адресов.</p>
+      <p>Метод определения номера через DonatePay/DonationAlerts: при возникновении ошибки 503 Bad Gateway на странице оплаты, просмотр кода элемента позволяет получить часть данных пользователя (метод актуален).</p>
+      <ul>
+        <li><a href="http://com.lullar.com" target="_blank">http://com.lullar.com</a></li>
+        <li><a href="http://www.emailfinder.com" target="_blank">http://www.emailfinder.com</a></li>
+        <li><a href="http://www.spokeo.com/email-search" target="_blank">http://www.spokeo.com/email-search</a></li>
+        <li><a href="http://ctrlq.org/google/images/" target="_blank">http://ctrlq.org/google/images/</a></li>
+        <li><a href="http://emailchange.com/" target="_blank">http://emailchange.com/</a></li>
+      </ul>
 
-  <footer>
-    <p><strong>Автор:</strong> @advocatssaindessa</p>
-  </footer>
+      <h3>1.10. Методология поиска в поисковых системах</h3>
+      <p>Руководство по операторам Google: <a href="https://www.rush-analytics.ru/blog/seo-gid-po-poiskovym-operatoram-google" target="_blank">https://www.rush-analytics.ru/blog/seo-gid-po-poiskovym-operatoram-google</a></p>
+
+      <footer>
+        <p><strong>Автор:</strong> @advocatssaindessa</p>
+      </footer>
+      
+    </div>
+  </main>
+
 </body>
 </html>
