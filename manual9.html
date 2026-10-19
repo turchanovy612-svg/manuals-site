@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Методы блокировки Telegram (DSA)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1>@advocatssaindessa</h1>
+    <p>Сборник методичек</p>
+    <a href="index.html">🏠 На главную</a>
+    <a href="manual1.html">1. Сбор информации</a>
+    <a href="manual2.html">2. Блокировка аккаунтов</a>
+    <a href="manual3.html">3. Телефонные атаки</a>
+    <a href="manual4.html">4. Кибербуллинг</a>
+    <a href="manual5.html">5. Безопасность</a>
+    <a href="manual6.html">6. Соц. инженерия</a>
+    <a href="manual7.html">7. Очистка следа</a>
+    <a href="manual8.html">8. Разморозка Telegram</a>
+    <a href="manual9.html" class="active">9. Блокировка Telegram (DSA)</a>
+    <a href="glossary.html">📖 Глоссарий</a>
+  </aside>
+
+  <main class="main-content">
+    <div class="content-box">
+      
+      <button onclick="window.print()" class="btn">🖨️ Скачать в PDF</button>
+      
+      <h1>9. Методы блокировки аккаунтов, каналов и групп в Telegram</h1>
+
+      <h2>9.1. Метод DSA (Digital Services Act)</h2>
+      <p>Данный метод предполагает использование европейского законодательства для подачи официальной жалобы.</p>
+      <ol>
+        <li>Активируйте VPN-соединение с сервером европейской страны.</li>
+        <li>Перейдите на портал: <a href="https://telegram.org/dsa-report" target="_blank">https://telegram.org/dsa-report</a>.</li>
+        <li>Нажмите на появившуюся кнопку и введите номер телефона аккаунта.</li>
+        <li>Выполните авторизацию в сессии. В появившемся поле введите публичную ссылку на нарушение (на аккаунт, канал или группу).</li>
+        <li>Выберите категорию нарушения. Интерфейс доступен на английском языке:
+          <ul>
+            <li>Для жалобы на снос аккаунта выбирайте <strong>Other</strong>.</li>
+            <li>Для жалобы на детский контент выбирайте <strong>Насилие / Детское</strong>.</li>
+          </ul>
+        </li>
+        <li>При необходимости перевода непонятных пунктов используйте встроенный переводчик браузера или Google Lens.</li>
+      </ol>
+      <p><em>Рекомендация: подача жалоб с нескольких учетных записей повышает эффективность метода.</em></p>
+
+      <h2>9.2. Метод WEB (Через сайт поддержки)</h2>
+      <ol>
+        <li>Перейдите на портал: <a href="http://telegram.org/support" target="_blank">http://telegram.org/support</a>.</li>
+        <li>Составьте текст обращения на английском языке.</li>
+        <li>Заполните поля формы. В качестве контактных данных допускается использование вымышленных ФИО, но номер телефона и адрес электронной почты должны быть реальными (доступными).</li>
+      </ol>
+      <p><em>Данный метод имеет низкую эффективность. Рекомендуется отправлять большое количество обращений.</em></p>
+
+      <h2>9.3. Снос через жалобу волонтерам</h2>
+      <ol>
+        <li>В приложении Telegram перейдите в раздел «Настройки».</li>
+        <li>Выберите «Помощь» → «Задать вопрос».</li>
+        <li>Нажмите «Спросить волонтеров» → «Обратиться к волонтёрам» → «Да».</li>
+        <li>Вставьте подготовленный текст обращения в поле ввода.</li>
+      </ol>
+
+      <h2>9.4. Снос сессий (через WEB)</h2>
+      <p><strong>Необходимые данные:</strong></p>
+      <ul>
+        <li>Номер телефона объекта (можно получить через сервисы OSINT).</li>
+        <li>Имя пользователя (юзернейм) или цифровой идентификатор (ID).</li>
+        <li>Портал поддержки: <a href="http://telegram.org/support" target="_blank">http://telegram.org/support</a>.</li>
+      </ul>
+      <p><strong>Порядок действий:</strong></p>
+      <ol>
+        <li>Отправьте 3-5 запросов на получение кода подтверждения на номер объекта.</li>
+        <li>Перейдите на сайт поддержки и отправьте следующее обращение:<br>
+          <div class="code-block">
+Здравствуйте уважаемая поддержка Telegram!
+            Один из моих рабочих аккаунтов (ЮЗ),(АЙДИ) украли мошенники или соперники из другой компании способом фишинга.
+Я очень сильно прошу вас заморозить мой аккаунт или исключить все сеансы, чтобы злоумышленники не получили много важной информации моей компании.
+Меня могут крупно оштрафовать или уволить.
+Пожалуйста, обратите внимание на мою заявку.
+          </div>
+          <em>Примечание: ID объекта указывается с префиксом "id" (например, id1488).</em>
+        </li>
+        <li>Введите вымышленные ФИО.</li>
+        <li>В поле «Email» укажите: <strong>sms@telegram.org</strong>.</li>
+        <li>Введите номер телефона объекта и отправьте обращение.</li>
+      </ol>
+      <p><strong>Дополнительная мера (Ограничение доступа на 24 часа):</strong></p>
+      <ol>
+        <li>Введите номер объекта в приложении Telegram для получения кода.</li>
+        <li>После отправки запроса на код закройте приложение (или выйдите из сессии).</li>
+        <li>Повторите процедуру многократно. Это приведет к временной блокировке возможности входа на аккаунт (около 24 часов).</li>
+      </ol>
+
+      <h2>9.5. Снос сессий (через электронную почту)</h2>
+      <p>Выполните действия с запросами кодов (как в п. 9.4), после чего отправьте письмо на адрес <strong>sms@telegram.org</strong>.</p>
+      <p><strong>Тема письма:</strong> Request to delete all sessions from an account</p>
+      <p><strong>Текст письма:</strong></p>
+      <div class="code-block">
+Hello, dear Telegram support! One of my work accounts (ЮЗ), (idЦИФРЫ) was stolen by scammers or competitors from another company using phishing. I very much ask you to freeze my account or exclude all sessions so that the attackers do not get a lot of important information from my company. I can be heavily fined or fired. Please pay attention to my request.
+      </div>
+
+      <footer>
+        <p><strong>Автор:</strong> @advocatssaindessa</p>
+      </footer>
+      
+    </div>
+  </main>
+
+</body>
+</html>
